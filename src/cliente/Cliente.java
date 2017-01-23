@@ -46,7 +46,11 @@ public class Cliente {
             os.write(result);
             os.flush();
 
+            System.out.println("Numero 1 "+num1);
+            System.out.println("Numero 2 "+num2);
+            System.out.println("Signo "+result);
             
+            System.out.println(asdas.read());
             
             System.out.println("Cerrando el socket cliente");
 
