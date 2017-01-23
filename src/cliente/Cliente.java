@@ -13,13 +13,12 @@ import javax.swing.JOptionPane;
 
 
 
-public class Cliente extends Thread{
+public class Cliente {
 
     
     
     public static void main(String[] args) {
-        Fios fio1=new Fios("fio1");
-        fio1.start();
+        
         
         int num1=0;
         int num2=0;
