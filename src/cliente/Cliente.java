@@ -29,10 +29,7 @@ public class Cliente {
             Socket clienteSocket=new Socket("localhost",5555);
             System.out.println("Estableciendo la conexion");
 
-            /*InetSocketAddress addr=new InetSocketAddress("localhost",5554);
-            clienteSocket.bind(addr);
-            clienteSocket.connect(addr);*/
-            
+                        
             BufferedReader asdas = new BufferedReader(new InputStreamReader(clienteSocket.getInputStream()));
             
             
@@ -43,15 +40,13 @@ public class Cliente {
             num1 = Integer.parseInt(JOptionPane.showInputDialog("Escribe el primer número"));
             num2 = Integer.parseInt(JOptionPane.showInputDialog("Escriba el segundo número"));
             result = Integer.parseInt(JOptionPane.showInputDialog("Que operación quieres realizar? \n1= +\n2= -\n3= X\n4= / "));
-            os.write(result);
+            
             os.write(num1);
             os.write(num2);
-            
+            os.write(result);
             os.flush();
 
             
-            int total=asdas.read();
-            System.out.println("Total de " + num1 + result + num2 + " = " + total);
             
             System.out.println("Cerrando el socket cliente");
 
