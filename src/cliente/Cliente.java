@@ -13,11 +13,13 @@ import javax.swing.JOptionPane;
 
 
 
-public class Cliente {
+public class Cliente extends Thread{
 
     
     
     public static void main(String[] args) {
+        Fios fio1=new Fios("fio1");
+        fio1.start();
         
         int num1=0;
         int num2=0;
@@ -46,11 +48,8 @@ public class Cliente {
             os.write(result);
             os.flush();
 
-            System.out.println("Numero 1 "+num1);
-            System.out.println("Numero 2 "+num2);
-            System.out.println("Signo "+result);
-            
-            System.out.println(asdas.read());
+            int resRecib=asdas.read();
+            System.out.println(resRecib);
             
             System.out.println("Cerrando el socket cliente");
 
